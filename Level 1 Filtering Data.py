@@ -21,7 +21,7 @@ event = catalog.iloc[0]
 event_time = datetime.strptime(event['time_abs(%Y-%m-%dT%H:%M:%S.%f)'], '%Y-%m-%dT%H:%M:%S.%f')
 relative_time = event['time_rel(sec)']
 filename = event.filename
-
+#set path to mseed files
 data_directory = r'C:\Users\Nanditha sajeev\.spyder-py3\data\lunar\training\data\S12_GradeA\\'
 mseed_file_path = os.path.join(data_directory, f'{filename}.mseed')
 
