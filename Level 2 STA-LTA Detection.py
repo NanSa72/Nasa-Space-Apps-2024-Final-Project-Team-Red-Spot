@@ -7,7 +7,7 @@ from obspy.signal.trigger import classic_sta_lta, trigger_onset
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
 import os
-
+#edit catalogue directory
 cat_directory = r'C:\Users\Nanditha sajeev\.spyder-py3\data\lunar\training\catalogs\\'
 cat_file = os.path.join(cat_directory, 'apollo12_catalog_GradeA_final.csv')
 
@@ -20,7 +20,7 @@ except FileNotFoundError:
 event = catalog.iloc[0]
 event_time = datetime.strptime(event['time_abs(%Y-%m-%dT%H:%M:%S.%f)'],'%Y-%m-%dT%H:%M:%S.%f')
 filename = event.filename
-
+#edit data directory
 data_directory = r'C:\Users\Nanditha sajeev\.spyder-py3\data\lunar\training\data\S12_GradeA\\'
 mseed_file_path = os.path.join(data_directory, f'{filename}.mseed')
 
